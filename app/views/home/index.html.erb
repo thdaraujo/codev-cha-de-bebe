@@ -3,18 +3,23 @@
   @headTitle = 'Crie seu Chá de Bebê!'
 %>
 
-
-<%= form_for @donation do |f| %>
-  <p>
-    <label>Seu email</label>
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <label>Valor</label>
-    <%= f.text_field :value %>
-  </p>
-  <p>
-    <%= f.submit "Enviar" %>
-  </p>
-<% end %>
-
+<div class='row'>
+  <div class='col-md-4'>
+    <%= form_for @donation do |f| %>
+      <p>
+        <label>Seu email</label>
+      </p>
+      <p>
+        <%= f.text_field :email %>
+      </p>
+      <p>
+        <label>Valor</label>
+      </p>
+        <%= f.text_field :value %>
+      </p>
+      <p>
+        <%= f.submit "Enviar", :class => 'btn btn-success'  %>
+      </p>
+    <% end %>
+  </div>
+</div>
