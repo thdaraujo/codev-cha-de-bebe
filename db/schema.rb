@@ -11,13 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131212000759) do
+ActiveRecord::Schema.define(version: 20131214173215) do
+
+  create_table "baby_showers", force: true do |t|
+    t.string   "father_name"
+    t.string   "mother_name"
+    t.string   "birth_date"
+    t.string   "thank_note"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "donations", force: true do |t|
     t.string   "email"
     t.decimal  "value"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "baby_shower_id"
   end
+
+  add_index "donations", ["baby_shower_id"], name: "index_donations_on_baby_shower_id"
 
 end
