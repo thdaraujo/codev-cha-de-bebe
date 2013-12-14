@@ -14,7 +14,8 @@ class DonationsControllerTest < ActionController::TestCase
 
     #assigns recupera uma variavel de instancia criada na action.
     #da redirect para o show (301) quando voce passa um objeto
-  	assert_redirected_to donations_path assigns(:donation)
+    #donation_path aponta para o show de 1 doacao
+  	assert_redirected_to donation_path assigns(:donation)
   end
 
   test "rota do show de uma doacao" do

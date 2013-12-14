@@ -18,10 +18,10 @@ class HomeControllerTest < ActionController::TestCase
     assert_select "form[action=?][method=?]", "/donations", "post" do
 
       # form tem o campo email
-      assert_select "input[name=?]", "email"
+      assert_select "input[name=?]", "donation[email]"
   
       # form tem o campo valor
-      assert_select "input[name=?]", "value"
+      assert_select "input[name=?]", "donation[value]"
     end
 
     # todos os inputs tem name

@@ -5,12 +5,11 @@ ChaDeBebe::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  post '/donations' => 'donations#create'
-
-  get '/donations/:id' => 'donations#show'
+  #post '/donations' => 'donations#create'
+  #get '/donations/:id' => 'donations#show', as: :donation
 
   #pode ser escrito assim tambem
-  # resources, only: [:create, :show]
+  resources :donations, only: [:create, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

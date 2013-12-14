@@ -4,7 +4,7 @@
 %>
 
 
-<%= form_for @donation, url: {controller: "donations", action: "create", method: "POST"} do |f| %>
+<%= form_for @donation do |f| %>
   <p>
     <label>Seu email</label>
     <%= f.text_field :email %>
