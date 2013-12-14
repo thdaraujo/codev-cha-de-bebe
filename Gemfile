@@ -5,6 +5,10 @@ gem 'rails', '4.0.2'
 
 gem 'rails-i18n'
 
+gem 'newrelic_rpm'
+
+gem 'simplecov', :require => false, :group => :test
+
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
