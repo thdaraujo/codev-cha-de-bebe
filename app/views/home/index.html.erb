@@ -3,6 +3,14 @@
   @headTitle = 'Crie seu Chá de Bebê!'
 %>
 
+<% if @donation.errors.any? %>
+  <ul>
+    <% @donation.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <div class='row'>
   <div class='col-md-4'>
     <%= form_for @donation do |f| %>

@@ -35,18 +35,18 @@ class DonationTest < ActiveSupport::TestCase
      donation = Donation.new 
      refute donation.save, "deveria dar erro de validacao!"
       
-     assert_includes(donation.errors[:email], "can't be blank")
-     assert_includes(donation.errors[:email], "is invalid")
+     assert_includes(donation.errors[:email], "não pode ficar em branco")
+     assert_includes(donation.errors[:email], "não é válido")
 
-     assert_includes(donation.errors[:value], "can't be blank")
-     assert_includes(donation.errors[:value], "is not a number")
+     assert_includes(donation.errors[:value], "não pode ficar em branco")
+     assert_includes(donation.errors[:value], "não é um número")
 
      donation.email = "123"
      donation.value = -1
      refute donation.save, "deveria dar erro de validacao!"
      
-     assert_includes(donation.errors[:email], "is invalid")
-     assert_includes(donation.errors[:value], "must be greater than 0")
+     assert_includes(donation.errors[:email], "não é válido")
+     assert_includes(donation.errors[:value], "deve ser maior que 0")
 
      donation.email = "123@4.com"
      donation.value = 1
