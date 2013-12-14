@@ -3,7 +3,9 @@
 one:
   email: MyString
   value: 9.99
+  baby_shower: one
 
 two:
   email: MyString2
   value: 9.99
+  baby_shower: two

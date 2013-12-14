@@ -54,4 +54,9 @@ class DonationTest < ActiveSupport::TestCase
 
    end
 
+   test "Relacionamento" do
+     assert_equal  baby_showers(:one), donations(:one).baby_shower
+
+   end
+
 end
