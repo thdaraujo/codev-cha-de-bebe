@@ -30,11 +30,18 @@ class DonationsControllerTest < ActionController::TestCase
     get :show, id: donations(:one).to_param
     
     assert_select "#thanks"
-
     assert_select "#email", :text => donations(:one).email
-
     assert_select "#value", :text => donations(:one).value
 
   end
+   
+  test "Validate" do
+    
+    #TODO
+    #post :create, :donation
+    #post :create, :donation => { :email => '123', :value => -1 }
+    #post :create, :donation => { :email => 'foo@bar.com', :value => 10.00 }
+
+   end
 
 end
