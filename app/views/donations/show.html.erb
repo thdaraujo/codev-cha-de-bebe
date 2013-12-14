@@ -1,11 +1,11 @@
 <% 
-  @title = 'Chá de Bebê criado!' 
-  @headTitle = 'Chá de Bebê criado!'
+  @title = 'Doação para Chá de Bebê!' 
+  @headTitle = 'Doação!'
 %>
 
 <div id='donations-show'>
   <p>
-    <label id='thanks'>Obrigado pela doação!</label>
+    <label id='thanks'>Obrigado pela sua doação!</label>
   </p>
   <p>
     <label>e-mail:</label>
@@ -13,6 +13,6 @@
 	</p>
   <p>
     <label>valor:</label>
-    <label id='value'><%= @donation.value %></label>
+    <label id='value'><%= number_to_currency(@donation.value) %></label>
   </p>
 </div>
