@@ -1,0 +1,18 @@
+<% 
+  @title = 'Chá de Bebê criado!' 
+  @headTitle = 'Chá de Bebê criado!'
+%>
+
+<div id='donations-show'>
+  <p>
+    <label id='thanks'>Obrigado pela doação!</label>
+  </p>
+  <p>
+    <label>e-mail:</label>
+    <label id='email'><%= @donation.email %></label>
+	</p>
+  <p>
+    <label>valor:</label>
+    <label id='value'><%= @donation.value %></label>
+  </p>
+</div>
