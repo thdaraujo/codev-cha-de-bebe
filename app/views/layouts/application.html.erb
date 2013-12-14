@@ -9,12 +9,11 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<h1>
-	<%= @headTitle %>
-</h1>
-<%= yield %>
+<body id='<%= params[:controller] %>' class='<%= params[:action] %>'>
+  <h1>
+	  <%= @headTitle %>
+  </h1>
+  <%= yield %>
 
 </body>
 </html>
