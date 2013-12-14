@@ -8,7 +8,11 @@ class DonationsController < ApplicationController
   end
   
   def show
-    @donation = Donation.find params[:id]
+  	#active record base: method_missing(msg, *params, &block) 
+  	#                     -> does not understand
+  	#                     -> cria o metodo select by id e coloca em um cache
+  	# 					  -> na prox vez que chamar, usa o metodo diretamente.
+    @donation = Donation.find_by_id(params[:id])
   end
 
 end
